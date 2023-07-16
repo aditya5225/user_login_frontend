@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="row">
+          <h3 class="login-heading mb-4">User List</h3>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class="text-primary">
+                <th class="text-left">Full Name</th>
+                <th class="text-left">Username</th>
+                <th class="text-center">Status</th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let user of userData" style="cursor: pointer">
+                  <td class="text-left">{{ user.fullName }}</td>
+                  <td class="text-left">{{ user.username }}</td>
+                  <td class="text-center">{{user.isActive == 0 ? "Active": 0}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
